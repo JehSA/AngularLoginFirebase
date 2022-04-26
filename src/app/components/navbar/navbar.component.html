@@ -1,0 +1,12 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/punk-icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Sistema de Login
+  </a>
+  <a class="navbar-brand" href="#" *ngIf="userLogged|async as user">
+    <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}" width="30" height="30" class="d-inline-block align-top" alt="">
+    Logado!!!
+    {{ user.email }}
+  </a>
+</nav>
